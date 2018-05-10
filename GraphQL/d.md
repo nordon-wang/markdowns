@@ -261,3 +261,4 @@ query HeroNameAndFriends {
 
 1. 字段的参数可能是会动态变化的，需要一个变量来存储这个参数
 2. 
+
