@@ -1,0 +1,40 @@
+# 优化
+
+1.给出一个`20180408000000`字符串，formatDate函数要处理并返回`2018-04-08 00:00:00` 
+
+```javascript
+let _dete='20180408000000'
+function formatStr(str){
+    return str.replace(/(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/, "$1-$2-$3 $4:$5:$6")
+}
+formatStr(_dete);
+//"2018-04-08 00:00:00"
+```
+
+- 根据x的位置进行替换填充数据 
+
+```javascript
+let _dete='20180408000000'
+function formatStr(str,type){
+    let _type=type||"xxxx-xx-xx xx:xx:xx";
+    for(let i = 0; i < str.length; i++){
+        _type = _type.replace('x', str[i]);
+    }
+    return _type;
+}
+formatStr(_dete);
+result:"2018-04-08 00:00:00"
+```
+
+- 改进
+
+```javascript
+let _dete='20180408000000'
+function formatStr(str,type){
+    let i = 0,_type = type||"xxxx-xx-xx xx:xx:xx";
+    return _type .replace(/x/g, () => str[i++])
+}
+formatStr(_dete);
+result:"2018-04-08 00:00:00"
+```
+
