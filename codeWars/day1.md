@@ -70,7 +70,6 @@ function digital_root(n) {
 
 ```javascript
 function findOutlier(arr){
-  //your code here
   let result = [{
       count:0,
       num:0
