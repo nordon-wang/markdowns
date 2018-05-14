@@ -13,7 +13,6 @@ console.log(+num.toString().split('').reverse().join(''))
 ```javascript
 function getMiddle(n)
 {
-  //Code goes here!
   return Boolean(n.length % 2) ? n.substr(n.length / 2,1) : n.substr(n.length / 2 - 1,2)
 }
 ```
@@ -32,8 +31,6 @@ function filter_list(arr) {
 
 ```javascript
 function squareDigits(num){
-  //may the code be with you
-
   let newNum = num + ''
 
   let result = newNum.split('').reduce( (sum,item) => {
@@ -41,6 +38,60 @@ function squareDigits(num){
   },'')
   
   return +result
+}
+```
+
+- 数字的每一位进行相加
+
+```javascript
+/* 
+    digital_root(942)
+    => 9 + 4 + 2
+    => 15 ...
+    => 1 + 5
+    => 6 */
+function digital_root(n) {
+  if(n/10 <1){
+      // 个位数
+      return n;
+    }else{
+      let tem = n.toString().split('').reduce( (sum,item) => sum + +item,0)
+      return digital_root(tem)
+    }
+}
+
+// 一句话
+function digital_root(n) {
+	return n/10 <1 ?  n :  digital_root(n.toString().split('').reduce( (sum,item) => sum + +item,0))
+}
+```
+
+- 将数组中唯一的奇数或者偶数筛选出来 
+
+```javascript
+function findOutlier(arr){
+  //your code here
+  let result = [{
+      count:0,
+      num:0
+    },{
+      count:0,
+      num:0
+    }]
+
+    arr.forEach(item => {
+      if(item % 2){
+        result[0].count++;
+        result[0].num = item;
+      }else{
+        result[1].count++;
+        result[1].num = item;
+      }
+    })
+
+    let r = result.filter( item => item.count == 1)
+    
+    return r[0].num
 }
 ```
 
