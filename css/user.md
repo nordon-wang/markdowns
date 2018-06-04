@@ -22,10 +22,17 @@ karlthorm
 historyIsChange
 this.$store.state.historical.historical_record
 
-//单图文
-38197	
-// 富文本 没保存预览
-38237
+fa-chevron-down
+font-family: FontAwesome;
+
+// 帮助文档
+http://t.71360.com/webhelp/
+
+//移动站
+http://nordon2.com/m?app=mb
+
+//移动站手机看
+http://127.0.0.1/?app=mb
 
 38297	轻微	一般	代码错误	 返回图标没有显示 但是预览时显示了
 //38318	
@@ -33,28 +40,60 @@ this.$store.state.historical.historical_record
 ```
 
 ```html
-<!-- 112 112 -->
-<p style="line-height:16.8px;color:#5A5A5A;font-family:Arial, 宋体, Helvetica, sans-serif, Verdana;white-space:normal;text-align:center;margin-top:35px;">
-	<span style="line-height:24.75px;color:#666666;font-size:15px;font-family:微软雅黑;">技术实</span> 
-</p>
-<p style="line-height:16.8px;color:#5A5A5A;font-family:Arial, 宋体, Helvetica, sans-serif, Verdana;white-space:normal;text-align:center;">
-	<span style="line-height:24.75px;color:#666666;font-size:15px;font-family:微软雅黑;">力雄厚</span> 
-</p>
+
+                "mb_search_text_width":50,
+                "mb_search_text_height":30,
+                "mb_search_text_color":"#111",
+                "mb_search_text_bc":"rgb(216, 215, 215)",
+                "mb_search_text_br":5,
+                "mb_search_text_left":300,
+                "mb_search_text_top":14,
+                "mb_search_text_border_c":"rgb(241, 241, 241)",
 ```
 
-```html
-<!-- 300 300 -->
-<p style="text-align:center;padding-top:15px;">
-	<img src="http://kavinyl-064.web2.nbseo.cn/data/u12348/public/201804/20180418/2018041814092990784.png" width="37" height="43" alt="" /> 
-</p>
-<p style="text-align:center;margin-top:10px;">
-	<span style="color:#FFFFFF;font-size:16px;line-height:1.5;">最新研发技术</span> 
-</p>
-<p style="text-align:center;">
-	<span style="color:#000;font-size:14px;font-famiy:Alpida Unicode System;"><strong>Best Technology</strong></span> 
-</p>
-<p style="text-align:center;width:250px;margin:30px auto 0;">
-	xxx提供网络营销服务行业涉及教育、服饰、金融、房地产、旅游、IT、电子、汽车、快消、日化等多个行业和领域，在业界赢得良好口碑和赞誉。
-</p>
+```javascript
+// esc 按钮切换左边栏
+    $(document).keydown(e => {
+      if (e.keyCode == 27) {
+        this.isShow = !this.isShow
+      }
+
+      // w-87 s-83 a-65 d-68
+      if (e.keyCode == 87 && e.shiftKey) {
+        this.keyScrollTop()
+      }
+
+      if (e.keyCode == 83 && e.shiftKey) {
+        this.keyScrollBtm()
+      }
+
+      if (e.keyCode == 65 && e.shiftKey) {
+        this.keyScrollNext()
+      }
+
+      if (e.keyCode == 68 && e.shiftKey) {
+        this.keyScrollPre()
+      }
+    })
+```
+
+```javascript
+ $('<style>html{margin:0;padding:0}body{margin:0;padding:5px}body,td{font:12px/1.5 "sans serif",tahoma,verdana,helvetica}body,p,div{word-wrap:break-word}p{margin:0}ul,ol{padding:0;margin:0}table{border-collapse:collapse}img{border:0}noscript{display:none}table.ke-zeroborder td{border:1px dotted #AAA}img.ke-flash{border:1px solid #AAA;background-position:center center;background-repeat:no-repeat;width:100px;height:100px}img.ke-rm{border:1px solid #AAA;background-position:center center;background-repeat:no-repeat;width:100px;height:100px}img.ke-media{border:1px solid #AAA;background-position:center center;background-repeat:no-repeat;width:100px;height:100px}img.ke-anchor{border:1px dashed #666;width:16px;height:16px}.ke-script,.ke-noscript,.ke-display-none{display:none;font-size:0;width:0;height:0}.ke-pagebreak{border:1px dotted #AAA;font-size:0;height:2px}em{font-style:italic}ul li{list-style-type:disc;list-style-position:inside}ol li{list-style-type:decimal;list-style-position:inside}blockquote{font-size:inherit}p{margin:0}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h3{font-size:24px}h1{font-size:2em}h2,.h2{font-size:30px}h4,.h4{font-size:18px}</style>').appendTo(iframeObj)
+
+```
+
+```javascript
+/* var timer = setTimeout(function(){
+            try{
+
+                var iframeObj = $('.ke-edit-iframe').eq(0)[0].contentWindow.document.documentElement;
+            
+                console.log('123',$(iframeObj).find('head style')[0].innerText);
+                // $(iframeObj).find('head style')[0].innerText = 'div:{margin:0;}';
+            }catch(err){
+                console.log(err);
+            }
+            clearTimeout(timer);
+        },200)*/
 ```
 
