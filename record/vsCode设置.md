@@ -15,18 +15,18 @@
     "vetur.format.defaultFormatter.html": "js-beautify-html",
     "eslint.autoFixOnSave": true,
     "eslint.validate": [
-      "javascript",
-      {
-        "language": "html",
-        "autoFix": true
-      },
-      {
-        "language": "vue",
-        "autoFix": true
-      },
-      "javascriptreact",
-      "html",
-      "vue"
+        "javascript",
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        "javascriptreact",
+        "html",
+        "vue"
     ],
     "eslint.options": { "plugins": ["html"] },
     "prettier.singleQuote": true,
@@ -38,19 +38,37 @@
     "editor.fontSize":17,
     "typescript.check.tscVersion": false,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "workbench.panel.location": "bottom"
-    // "prettier.eslintIntegration": true
-  }
-  
+    "workbench.panel.location": "bottom",
+    // "prettier.eslintIntegration": true,
+    "editor.tabSize": 2,
+    "editor.fontSize": 22
+}
+
 ```
 
 - vscode 插件
 
 ```json
 Auto Close Tag
-Path Intellisense
-Prettier
 Vetur
-vscode-icons
+HTML Snippets
+HTML CSS Support 
+JQuery Code Snippets
+Path Intellisense
+Npm Intellisense
+Document this 
+Auto Rename Tag
+vscode-icon
+One Dark Theme
+Open-In-Browser
+Quokka
+HTML Boilerplate
+Prettier
+ Color Info
+SVG Viewer
+Icon Fonts
+
+
+
 ```
 
