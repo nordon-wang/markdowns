@@ -169,6 +169,8 @@ class HTMLPlugin {
       let $ = cheerio.load(result)
       // 创建 script 标签后插入HTML中
       Object.keys(compilation.assets).forEach(item => {
+        // $(`<script src="/${item}"></script>`).appendTo('body')
+        // 为了方便调试将路径修改为相对路径
         $(`<script src="${item}"></script>`).appendTo('body')
       })
       // 转换成新的HTML并写入到 dist 目录中
