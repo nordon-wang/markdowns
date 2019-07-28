@@ -194,6 +194,17 @@ module.exports = HTMLPlugin
   - compiler对象表示不变的webpack环境，是针对webpack的
   - compilation对象针对的是随时可变的项目文件，只要文件有改动，compilation就会被重新创建
 
+### 在webpack-theory中添加plugin功能
+
+#### tabable简介
+
+> 在webpack内部实现时间流机制的核心就在于tapable，有了它就可以通过事件流的形式，将各个插件串联起来，tapable类似于node中的events库，核心原理就是一个订阅发布模式
+
+- 基本用法
+  - 定义钩子
+  - 使用者注册事件
+  - 在合适的阶段调用钩子，触发事件
+
 ## 插件列表
 
 ### 解析AST语法树
