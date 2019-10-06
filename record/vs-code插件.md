@@ -1,0 +1,27 @@
+- Atom One Dark Theme 主题
+- VSCode Great Icons 图标主题
+- Beautify 美化vscode代码
+- Bracket Pair Colorizer 每一对括号用不同颜色区别 （括号强迫症必备）
+- cssrem 将css中的px自动转换为rem.再也不用计算器了（大漠大神推介）
+- Code Runner node，python等代码不必开命令行即可运行
+- Eslint 语法检测
+- Git History git提交历史
+- GitLens 在代码中显示每一行代码的提交历史
+- HTML CSS Support vscode对html，css文件支持，便于你快速书写属性
+- Path Intellisense 路径识别苦战，比如书写图片路径时。遗憾就是，对webpack项目中的路径别名无法扩展
+- Prettier 格式化，使用标准风格，快捷键 alt+shift +F
+- Python 添加对.py文件的支持，毕竟tab与空格的痛苦写过python的都知道
+- React Native Tools 添加对 React Native项目的支持，快速书写es6以及jsx
+- C/C++ 运行React Native项目时，有些文件的查看需要这个
+- Settings Sync 用于同步vscode配置，多台电脑一份配置（相对而言配置复杂，可不安装）
+- Sublime Text Keymap 启动sublimeText的快捷键配置。vscode上面自有一套快捷键设定，个人习惯sublime快捷键
+- Vetur 添加对.vue后缀文件的快速书写支持。
+- Vue 2 Snippets 快速新建vue页面
+- markdownlint 书写md文件的预览插件
+- language-stylus CSS预处理器styl后缀文件的识别扩展
+- View In Browser 迅速通过浏览器打开html文件
+- koroFileHeader 文档的顶部注释和函数的注释
+- Code Spell Checker 单词拼写检测
+- IntelliSense for CSS class names in HTML  CSS 类名智能提示
+- koroFileHeader 添加文件头部注释和函数注释
+- Document This 快速注释
