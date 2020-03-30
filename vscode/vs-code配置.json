@@ -1,4 +1,5 @@
 {
+    "files.autoSave": "onFocusChange",
     "editor.tabSize": 2,
     "editor.fontSize":14,
     "files.associations": {

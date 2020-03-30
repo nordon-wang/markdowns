@@ -25,3 +25,5 @@
 - IntelliSense for CSS class names in HTML  CSS 类名智能提示
 - koroFileHeader 添加文件头部注释和函数注释
 - Document This 快速注释
+- lorem 文案生成
+- import cost 自动计算引入文件大小
