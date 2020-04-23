@@ -131,3 +131,64 @@ const formatDemandItemType2 = (value) => {
 }
 ```
 
+- Modal框的控制
+
+一个页面种通常会存在很多个不同功能的弹框，若是每一个弹框都设置一个对应的变量来控制其显示，则会导致变量数量比较冗余和命名困难，可以使用一个变量来控制同一页面中的所有`Modal`弹框的展示
+
+比如某个页面中存在三个`Modal`弹框
+
+```js
+// bad
+// 每一个数据控制对应的Modal展示与隐藏
+new Vue({
+    data() {
+        return {
+            modal1: false,
+            modal2: false,
+            modal3: false,
+        }
+    }
+})
+
+// good
+// 当modalType为对应的值时 展示其对应的弹框
+new Vue({
+    data() {
+        return {
+            modalType: '' // modalType值为 modal1，modal2，modal3
+        }
+    }
+})
+```
+
+- 注意组件给出的改变时的值和类型
+
+例如`select`下拉框设置`multiple`时，选中的值发生改变时`on-change`事件触发，此时`on-change`的参数类型是`Array`，若是需要一些逻辑判断需要注意
+
+```js
+// bad
+{
+  onChange(val) {
+    if(val !== ''){
+      // 切勿认为当清空选择的时候以为val为空字符串''
+    }
+  }
+}
+```
+
+- `html`中展示一些如`<`，`>`,`&`等字符时，使用字符实体代替
+
+```html
+<!-- bad -->
+<div>
+  > 1 & < 12
+</div>
+  
+<!-- bad -->
+<div>
+  &gt; 1 &amp; &lt; 12
+</div>
+```
+
+
+

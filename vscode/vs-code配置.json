@@ -1,7 +1,7 @@
 {
     "files.autoSave": "onFocusChange",
     "editor.tabSize": 2,
-    "editor.fontSize":14,
+    "editor.fontSize":18,
     "files.associations": {
         "*.vue": "vue"
     },
@@ -39,15 +39,9 @@
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "editor.codeLens": true,
     "editor.snippetSuggestions": "top",
-    "fileheader.Author": "xxx",
-    "fileheader.LastModifiedBy": "xxx",
-    "fileheader.customMade": {
-        "Author": "xxx",
-        "Date": "Do not edit",
-        "Description": "8888",
-        "Email": "xxx@oyohotels.cn"
-    },
     "vetur.validation.template": false,
-    "fileheader.tpl": "/*\r\n * @Author: {author} \r\n * @Date: {createTime} \r\n * @Email: {email} \r\n * @Description: {description} \r\n */\r\n"
-
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.wordWrap": "on"
 }

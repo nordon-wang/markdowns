@@ -16,6 +16,7 @@
 - Settings Sync 用于同步vscode配置，多台电脑一份配置（相对而言配置复杂，可不安装）
 - Sublime Text Keymap 启动sublimeText的快捷键配置。vscode上面自有一套快捷键设定，个人习惯sublime快捷键
 - Vetur 添加对.vue后缀文件的快速书写支持。
+- Vue VSCode Snippets  快速生成基础结构
 - Vue 2 Snippets 快速新建vue页面
 - markdownlint 书写md文件的预览插件
 - language-stylus CSS预处理器styl后缀文件的识别扩展
