@@ -190,5 +190,44 @@ new Vue({
 </div>
 ```
 
+- 解构赋值以及默认值，当解构的数量小于多少时适合直接解构并赋值默认值，数据是否进行相关的聚合处理
+
+```js
+const {
+  naem = '',
+  age = 10,
+  gender = 'man'
+} = res.data
+
+// bad
+this.name = name
+this.age = age
+this.gender = gender
+
+// good
+this.person = {
+  naem,
+  age,
+  gender
+}
+```
+
+- 编写`template`模板时，属性过多时，是否换行
+
+```vue
+<template>
+<!-- 不换行 -->
+<VueButton class="icon-button go-up" icon-left="keyboard_arrow_up" v-tooltip="$t('org.vue.components.folder-explorer.toolbar.tooltips.parent-folder')" @click="openParentFolder" />
+
+<!-- 换行 -->
+<VueButton
+  class="icon-button go-up"
+  icon-left="keyboard_arrow_up"
+  v-tooltip="$t('org.vue.components.folder-explorer.toolbar.tooltips.parent-folder')"
+  @click="openParentFolder"
+/>
+</template>
+```
+
 
 
