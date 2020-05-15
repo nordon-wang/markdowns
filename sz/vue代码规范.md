@@ -399,6 +399,8 @@ methods: {
 }
 ```
 
+### v-bind
+
 
 
 ## HTML部分
@@ -444,16 +446,35 @@ methods: {
 
 在开发中修改第三方组件样式是很常见，但由于 `scoped` 属性的样式隔离，可能需要去除 `scoped` 或是另起一个 `style` 。这些做法都会带来副作用（组件样式污染、不够优雅），样式穿透在css预处理器中使用才生效。
 
-我们可以使用 `>>>` 或 `/deep/` 解决这一问题:
+- less使用  **/deep/**
+
+```less
+
+<style scoped lang="less">
+.content /deep/ .el-button {
+	 height: 60px;
+}
+</style>
+```
+
+- scss使用 **::v-deep**
+
+```scss
+
+<style scoped lang="scss">
+.content ::v-deep .el-button {
+  height: 60px;
+}
+</style>
+
+```
+
+- stylus使用 **>>>**
 
 ```stylus
-<style scoped>
+<style scoped ang="stylus">
 外层 >>> .custon-components{
-  // to do...
-}
-
-/deep/ .custon-components {
-  // to do...
+  height: 60px;
 }
 </style>
 ```
