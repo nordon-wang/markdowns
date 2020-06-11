@@ -72,6 +72,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ```shell
 vim ~/.zshrc
 
+ZSH_THEME="ys"
 plugins=(git brew laravel5 autojump zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
@@ -80,4 +81,22 @@ plugins=(git brew laravel5 autojump zsh-autosuggestions zsh-syntax-highlighting)
 ```shell
 source ~/.zshrc
 ```
+
+### shell终端的前缀信息
+
+修改~/.oh-my-zsh/themes下的主题文件， 之前设置的是`ZSH_THEME="ys"`，找到对应的`ys.zsh-theme`文件进行修改
+
+```shell
+PROMPT="
+%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
+%{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
+${hg_info}\
+${git_info}\
+ \
+$exit_code
+%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
+
+```
+
+
 
