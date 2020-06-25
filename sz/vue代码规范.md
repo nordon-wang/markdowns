@@ -1,6 +1,6 @@
-> 国外发生了程序员枪击同事的事件。而原因，不是产品改需求，竟是同事写代码不规范：**不写注释、不遵循驼峰命名、括号换行，最主要还天天 git push -f 提交代码**。
+规范与每个团队和个人都是息息相关的，因为其影响的不只是只是代码的维护和理解成本，严重的时候是会影响成员开发的心情
 
-编码规范与每个团队和个人都是息息相关的，因为其影响的不只是
+一个团队的编码规范、git规范等，并没有绝对的最优解，心里要清楚明白`没有银弹`，规范是为了让团队统一，提高代码阅读性、降低代码维护成本等，本文是记录一些在项目`code review`中常见的规范，仅供参考
 
 ## JS部分
 
@@ -129,7 +129,7 @@ const router = new VueRouter({
 
 ### Vue生命周期
 
-在父子组件中，掌握父子组件对应的生命周期钩子加载顺序可以让开发者在更合适的时候做适合的事情
+在父子组件中，掌握父子组件对应的生命周期钩子加载顺序可以让开发者在更合适的时候做适合的事情，这个问题在最近的面试中起码被问到了三次，还是需要注意的
 **父组件**
 
 ```vue
@@ -399,7 +399,78 @@ methods: {
 }
 ```
 
+### v-bind
 
+在日常的开发过程中， 提取和封装组件是一件很常规的操作，但是当组件需要的参数非常多时，会导致传递一堆的`prop`，不仅书写上面比较繁琐，对代码的维护和阅读不是一件有利的事情
+
+例如组件`test-demo`需要一堆`props`传递
+
+使用时
+
+```vue
+<template>
+  <test-demo 
+    :data1="data1"
+    :data2="data2"
+    :data3="data3"
+    ...假设还有一堆
+  />
+</template>
+```
+
+`test-demo`中需要接收处理
+
+```vue
+{
+	props: ['data1', 'data2', 'data3', ...]
+}
+// or
+props: {
+  modalVisible: {
+    // 控制展示modal
+    type: Boolean,
+    default: false
+  },
+  data1: {
+    type: String,
+    default: '1'
+  },
+  data2: {
+    type: String,
+    default: '2'
+  },
+  data3: {
+    type: String,
+    default: '3'
+  }
+}
+```
+
+- 建议
+
+将子组件需要的数据收集起来，集中在一个对象中，使用`v-bind`传递将这个对象传递，子组件的使用和普通的`props`一样
+
+```vue
+<template>
+	<test-demo 
+    v-bind="obj"
+  />
+</ template>
+
+<script>
+export default {
+  data () {
+    return {
+      obj: { // 将需要传递给子组件的数据收集
+        data1: '1',
+        data2: '2',
+        data3: '3'
+      }
+    }
+  }
+}
+</script>
+```
 
 ## HTML部分
 
@@ -444,16 +515,35 @@ methods: {
 
 在开发中修改第三方组件样式是很常见，但由于 `scoped` 属性的样式隔离，可能需要去除 `scoped` 或是另起一个 `style` 。这些做法都会带来副作用（组件样式污染、不够优雅），样式穿透在css预处理器中使用才生效。
 
-我们可以使用 `>>>` 或 `/deep/` 解决这一问题:
+- less使用  **/deep/**
+
+```less
+
+<style scoped lang="less">
+.content /deep/ .el-button {
+	 height: 60px;
+}
+</style>
+```
+
+- scss使用 **::v-deep**
+
+```scss
+
+<style scoped lang="scss">
+.content ::v-deep .el-button {
+  height: 60px;
+}
+</style>
+
+```
+
+- stylus使用 **>>>**
 
 ```stylus
-<style scoped>
+<style scoped ang="stylus">
 外层 >>> .custon-components{
-  // to do...
-}
-
-/deep/ .custon-components {
-  // to do...
+  height: 60px;
 }
 </style>
 ```

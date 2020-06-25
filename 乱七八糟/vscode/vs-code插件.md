@@ -1,5 +1,9 @@
 - Atom One Dark Theme 主题
 - VSCode Great Icons 图标主题
+- Auto Rename Tag
+- Auto Close Tag
+- Auto Complete Tag
+- Highlight Matching Tag
 - Beautify 美化vscode代码
 - Bracket Pair Colorizer 每一对括号用不同颜色区别 （括号强迫症必备）
 - cssrem 将css中的px自动转换为rem.再也不用计算器了（大漠大神推介）
@@ -28,3 +32,14 @@
 - Document This 快速注释
 - lorem 文案生成
 - import cost 自动计算引入文件大小
+- vscode-icons
+- SVG Viewer
+- color-highlight
+- Quokka
+- HTML Snippets
+- Npm Intellisense
+
+
+https://zhuanlan.zhihu.com/p/111004160
+https://www.cnblogs.com/zhengqiang666/p/10725930.html
+- sonar

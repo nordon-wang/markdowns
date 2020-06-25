@@ -64,7 +64,7 @@ Open-In-Browser
 Quokka
 HTML Boilerplate
 Prettier
- Color Info
+Color Info
 SVG Viewer
 Icon Fonts
 
