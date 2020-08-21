@@ -33,6 +33,10 @@ git clone git://github.com/altercation/solarized.git
 # 然后打开 solarized/osx-terminal.app-colors-solarized/Solarized Dark ansi.terminal 配置文件
 ```
 
+### 安装 Homebrew
+
+[mac下镜像飞速安装Homebrew教程](https://zhuanlan.zhihu.com/p/90508170)
+
 ### 安装 autojump 插件
 
 ```shell
