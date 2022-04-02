@@ -20,11 +20,28 @@ chsh -s /bin/zsh
 ```
 
 ### 安装 oh my zsh
-
-```shell
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+安装 Oh My Zsh 方法
+可以通过 curl 或 wget 两种方式来安装，用一条命令即可安装。
+curl 安装
+GitHub:
 ```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+Gitee ( 国内镜像 )
+```
+sh -c "$(curl -fsSL https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh)"
+```
+wget 安装
+GitHub:
+```
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
+Gitee ( 国内镜像 )
+```
+sh -c "$(wget -O- https://gitee.com/pocmon/mirrors/raw/master/tools/install.sh)"
+```
+
 
 ### 配置 zsh
 
